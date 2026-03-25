@@ -177,10 +177,23 @@ async function sendMessage() {
 }
 
 /* ===== GROQ API CALL ===== */
-// ✅ Key is in quotes — this is the correct format
-const GROQ_API_KEY = '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';
+let GROQ_API_KEY = localStorage.getItem("groq_api_key") || "";
+
+function saveApiKey(){
+  const key = document.getElementById("apiKeyInput").value.trim();
+  if(!key){
+    alert("Please enter API key");
+    return;
+  }
+  localStorage.setItem("groq_api_key", key);
+  GROQ_API_KEY = key;
+  alert("API key saved successfully ✅");
+}
 
 async function askGroq(userMessage) {
+  if(!GROQ_API_KEY){
+    throw new Error("Enter Groq API key first.");
+  }
   const systemPrompt = `You are the official AI assistant for Gaya College of Engineering (GCE), a government engineering college in Gaya, Bihar, India under the Department of Science & Technology, Government of Bihar.
 
 Key facts about GCE:
