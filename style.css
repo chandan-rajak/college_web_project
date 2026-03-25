@@ -766,6 +766,36 @@ nav a:hover {
   border: none;
 }
 
+.api-key-widget{
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  background: var(--surface);
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  z-index: 999;
+}
+
+.api-key-widget input{
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  outline: none;
+  font-size: 12px;
+}
+
+.api-key-widget button{
+  margin-left: 6px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background: var(--primary);
+  color: white;
+  cursor: pointer;
+}
+
 /* ===== FOOTER ===== */
 .footer {
   background: var(--primary);
