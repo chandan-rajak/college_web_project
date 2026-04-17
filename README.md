@@ -147,7 +147,7 @@ College-student-portal/
 **1. Clone the repository**
 
 ```bash
-git clone https://github.com/Satyam-GitDotCom/College-student-portal.git
+git clone https://github.com/NoPatchForLife/College-student-portal.git
 cd College-student-portal
 ```
 
